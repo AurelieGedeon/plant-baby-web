@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useNavigation } from "react";
 import PlantCard from "./components/plantCard";
 
 export default function PlantList() {

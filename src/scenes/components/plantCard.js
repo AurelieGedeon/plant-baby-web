@@ -13,12 +13,7 @@ export default function PlantCard({ name, image }) {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
-        <CardMedia
-          component="img"
-          height="140"
-          image={image}
-          alt="green iguana"
-        />
+        <CardMedia component="img" height="140" image={image} alt={name} />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {name}
