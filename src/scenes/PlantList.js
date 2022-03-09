@@ -1,5 +1,5 @@
-import { useState, useEffect, useNavigation } from "react";
-import PlantCard from "./components/plantCard";
+import { useState, useEffect } from "react";
+import PlantCard from "../components/plantCard";
 
 export default function PlantList() {
   const [plantList, setPlantList] = useState();
@@ -19,7 +19,11 @@ export default function PlantList() {
           console.log(plant);
           return (
             <>
-              <PlantCard name={plant.plantName} image={plant.image} />
+              <PlantCard
+                name={plant.plantName}
+                image={plant.image}
+                id={plant.id}
+              />
               {/* <h1 key={plant.id}>{plant.water}</h1>
               <img src={plant.image} alt={plant.plantName} /> */}
             </>

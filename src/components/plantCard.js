@@ -1,4 +1,6 @@
 import * as React from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Card,
   CardContent,
@@ -7,11 +9,15 @@ import {
   Button,
   CardActionArea,
   CardActions,
-} from "@mui/material/";
+} from "@mui/material";
 
-export default function PlantCard({ name, image }) {
+export default function PlantCard({ name, image, id }) {
+  let navigate = useNavigate();
+  const handlePlantInfo = () => {
+    navigate(`/plants/${id}`);
+  };
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345 }} onClick={handlePlantInfo}>
       <CardActionArea>
         <CardMedia component="img" height="140" image={image} alt={name} />
         <CardContent>
