@@ -36,3 +36,45 @@
     transform: rotate(360deg);
   }
 }
+
+.scientific-name {
+  font-style: italic;
+}
+
+.plant-image {
+  width: 100%;
+  max-height: auto;
+}
+
+.plant-page {
+  display: flex;
+}
+
+.plant-page-img-column {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.plant-page-descriptions {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.accordion {
+}
+
+@media screen and (max-width: 600px) {
+  .plant-page {
+    flex-direction: column;
+  }
+  .plant-page-img-column,
+  .plant-page-descriptions {
+    width: 100%;
+  }
+}

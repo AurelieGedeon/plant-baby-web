@@ -5,8 +5,6 @@ import PlantPage from "./scenes/PlantPage";
 function App() {
   return (
     <>
-      <h1>Sup</h1>
-      {/* <PlantList /> */}
       <Routes>
         <Route path="/" element={<PlantList />} />
         <Route path="/plants/:plantId" element={<PlantPage />} />

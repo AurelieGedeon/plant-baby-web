@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import PlantCard from "../components/plantCard";
+import PlantCard from "../components/PlantCard";
 
 export default function PlantList() {
   const [plantList, setPlantList] = useState();
@@ -23,6 +23,9 @@ export default function PlantList() {
                 name={plant.plantName}
                 image={plant.image}
                 id={plant.id}
+                water={plant.water}
+                humidity={plant.humidity}
+                temperature
               />
               {/* <h1 key={plant.id}>{plant.water}</h1>
               <img src={plant.image} alt={plant.plantName} /> */}
