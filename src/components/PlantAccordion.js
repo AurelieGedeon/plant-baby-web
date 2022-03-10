@@ -17,8 +17,8 @@ export default function PlantAccordion({
   repot,
 }) {
   return (
-    <div>
-      <Accordion>
+    <div className="accordion">
+      <Accordion className="accordion">
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -42,7 +42,7 @@ export default function PlantAccordion({
           <Typography>{sunlight}</Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion className="accordion">
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -54,7 +54,7 @@ export default function PlantAccordion({
           <Typography>{humidity}</Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion className="accordion">
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -66,7 +66,7 @@ export default function PlantAccordion({
           <Typography>{temperature}</Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion className="accordion">
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -78,7 +78,7 @@ export default function PlantAccordion({
           <Typography>{fertilizer}</Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion className="accordion">
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -90,7 +90,7 @@ export default function PlantAccordion({
           <Typography>{medium}</Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion className="accordion">
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
