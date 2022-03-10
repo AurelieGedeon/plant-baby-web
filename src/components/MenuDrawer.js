@@ -37,7 +37,7 @@ export default function MenuDrawer() {
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
-      //   marginTop="64px"
+      style={{ marginTop: "64px" }}
     >
       <List>
         {["Dashboard", "Plants", "Plant Doctor"].map((text, index) => (
@@ -55,28 +55,25 @@ export default function MenuDrawer() {
 
   return (
     <div>
-      {["left"].map((anchor) => (
-        <div key={anchor}>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-            onClick={toggleDrawer(anchor, true)}
-          >
-            {anchor}
-            <MenuIcon />
-          </IconButton>
-          <Drawer
-            anchor={anchor}
-            open={state[anchor]}
-            onClose={toggleDrawer(anchor, false)}
-          >
-            {list(anchor)}
-          </Drawer>
-        </div>
-      ))}
+      <div>
+        <IconButton
+          size="large"
+          edge="start"
+          color="inherit"
+          aria-label="menu"
+          sx={{ mr: 2 }}
+          onClick={toggleDrawer("left", true)}
+        >
+          <MenuIcon />
+        </IconButton>
+        <Drawer
+          anchor={"left"}
+          open={state["left"]}
+          onClose={toggleDrawer("left", false)}
+        >
+          {list("left")}
+        </Drawer>
+      </div>
     </div>
   );
 }
