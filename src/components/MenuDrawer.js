@@ -3,7 +3,6 @@ import { useState } from "react";
 import {
   Box,
   Drawer,
-  Button,
   List,
   Divider,
   ListItem,
@@ -14,6 +13,7 @@ import {
 import InboxIcon from "@mui/icons-material/Inbox";
 import MenuIcon from "@mui/icons-material/Menu";
 import MailIcon from "@mui/icons-material/Mail";
+import "../App.css";
 
 export default function MenuDrawer() {
   const [state, setState] = useState({
@@ -37,6 +37,7 @@ export default function MenuDrawer() {
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
+      //   marginTop="64px"
     >
       <List>
         {["Dashboard", "Plants", "Plant Doctor"].map((text, index) => (
@@ -54,7 +55,7 @@ export default function MenuDrawer() {
 
   return (
     <div>
-      {[""].map((anchor) => (
+      {["left"].map((anchor) => (
         <div key={anchor}>
           <IconButton
             size="large"
@@ -67,7 +68,6 @@ export default function MenuDrawer() {
             {anchor}
             <MenuIcon />
           </IconButton>
-          {/* <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button> */}
           <Drawer
             anchor={anchor}
             open={state[anchor]}
