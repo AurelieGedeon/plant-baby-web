@@ -19,9 +19,6 @@ export default function MenuDrawer() {
   });
   const navigate = useNavigate();
 
-  const handleNavBtns = () => {
-    navigate(tabs.to);
-  };
   const tabs = [
     { label: "Dasboard", to: "/dashboard" },
     { label: "Plants", to: "/plants" },
@@ -48,8 +45,14 @@ export default function MenuDrawer() {
       style={{ marginTop: "64px" }}
     >
       <List>
-        {tabs.map((tab, index) => (
-          <ListItem button key={tab.label} onClick={handleNavBtns}>
+        {tabs.map((tab) => (
+          <ListItem
+            button
+            key={tab.label}
+            onClick={() => {
+              navigate(tab.to);
+            }}
+          >
             <ListItemText primary={tab.label} />
           </ListItem>
         ))}

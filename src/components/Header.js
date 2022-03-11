@@ -1,4 +1,4 @@
-import { AppBar, Box, Toolbar, Typography, Button } from "@mui/material";
+import { AppBar, Box, Toolbar, Button } from "@mui/material";
 import MenuDrawer from "./MenuDrawer";
 import "../App.css";
 import { useNavigate } from "react-router-dom";
