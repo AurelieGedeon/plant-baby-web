@@ -7,6 +7,9 @@
 
 .login-button {
   font-family: "Fira Sans", sans-serif;
+  color: "inherit";
+  position: absolute;
+  right: 15px;
 }
 
 .App {
@@ -25,6 +28,7 @@
 
 .plant-page {
   display: flex;
+  margin-top: 50px;
 }
 
 .plant-page-img-column {

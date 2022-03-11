@@ -1,24 +1,32 @@
 import * as React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Box,
   Drawer,
   List,
   Divider,
   ListItem,
-  ListItemIcon,
   ListItemText,
   IconButton,
 } from "@mui/material";
-import InboxIcon from "@mui/icons-material/Inbox";
 import MenuIcon from "@mui/icons-material/Menu";
-import MailIcon from "@mui/icons-material/Mail";
 import "../App.css";
 
 export default function MenuDrawer() {
   const [state, setState] = useState({
     left: false,
   });
+  const navigate = useNavigate();
+
+  const handleNavBtns = () => {
+    navigate(tabs.to);
+  };
+  const tabs = [
+    { label: "Dasboard", to: "/dashboard" },
+    { label: "Plants", to: "/plants" },
+    { label: "Plant Doctor", to: "/plantdoctor" },
+  ];
 
   const toggleDrawer = (anchor, open) => (event) => {
     if (
@@ -40,12 +48,9 @@ export default function MenuDrawer() {
       style={{ marginTop: "64px" }}
     >
       <List>
-        {["Dashboard", "Plants", "Plant Doctor"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
+        {tabs.map((tab, index) => (
+          <ListItem button key={tab.label} onClick={handleNavBtns}>
+            <ListItemText primary={tab.label} />
           </ListItem>
         ))}
       </List>
