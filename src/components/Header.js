@@ -1,7 +1,8 @@
-import { AppBar, Box, Toolbar, Button } from "@mui/material";
+import { AppBar, Box, Toolbar, Button, IconButton } from "@mui/material";
 import MenuDrawer from "./MenuDrawer";
 import "../App.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import Logo from "../assets/PlantBabyLogoS.png";
 
 export default function Header() {
   const navigate = useNavigate();
@@ -13,13 +14,14 @@ export default function Header() {
       <AppBar position="fixed">
         <Toolbar style={{ backgroundColor: "#224907" }}>
           <MenuDrawer />
-          <Button
-            color="inherit"
-            style={{ fontFamily: "Bukhari Script, sans-serif" }}
-            onClick={handleHomePage}
-          >
-            Plant Baby
+          <Button onClick={handleHomePage}>
+            <img
+              src={Logo}
+              alt="Plant Baby logo that leads to the home page"
+              height={"65px"}
+            />
           </Button>
+
           <Button
             color="inherit"
             className="login-button"
