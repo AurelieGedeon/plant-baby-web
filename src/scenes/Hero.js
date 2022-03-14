@@ -1,5 +1,5 @@
 import { Fab } from "@mui/material";
-import "../components/Hero.css";
+import "../scenes/Hero.css";
 import React from "react";
 
 export default function Hero() {
@@ -8,10 +8,7 @@ export default function Hero() {
       <div class="container">
         <div class="hero-image">
           {/* <div class="hero-button"> */}
-          <Fab
-            variant="extended"
-            style={{ position: "absolute", top: "250px", left: "250px" }}
-          >
+          <Fab className="hero-button" variant="extended">
             Get Started
           </Fab>
         </div>

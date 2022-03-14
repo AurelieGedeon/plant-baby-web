@@ -6,6 +6,17 @@
   object-fit: cover;
 }
 
+@media screen and (max-width: 1000px) {
+  .hero-image {
+    background-size: 100vw;
+    background-repeat: no-repeat;
+  }
+  .hero-button {
+    top: 50%;
+    left: 50%;
+  }
+}
+
 .container {
   display: flex;
   background: #0c0c0c;
@@ -17,7 +28,7 @@
 }
 
 .hero-button {
-  position: absolute;
-  top: 250px;
-  left: 250px;
+  position: relative;
+  top: 75%;
+  left: 50%;
 }

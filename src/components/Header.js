@@ -1,4 +1,4 @@
-import { AppBar, Box, Toolbar, Button, IconButton } from "@mui/material";
+import { AppBar, Box, Toolbar, Button } from "@mui/material";
 import MenuDrawer from "./MenuDrawer";
 import "../App.css";
 import { useNavigate, Link } from "react-router-dom";
@@ -8,6 +8,10 @@ export default function Header() {
   const navigate = useNavigate();
   const handleHomePage = () => {
     navigate("/");
+  };
+
+  const handleLoginPage = () => {
+    navigate("/login");
   };
   return (
     <Box sx={{ flexGrow: 1 }} className="header">
@@ -25,7 +29,13 @@ export default function Header() {
           <Button
             color="inherit"
             className="login-button"
-            style={{ position: "absolute", right: "15px" }}
+            style={{
+              position: "absolute",
+              right: "15px",
+              border: "10px",
+              borderColor: "white",
+            }}
+            onClick={handleLoginPage}
           >
             Login
           </Button>

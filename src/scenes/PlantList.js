@@ -27,8 +27,6 @@ export default function PlantList() {
                 humidity={plant.humidity}
                 temperature
               />
-              {/* <h1 key={plant.id}>{plant.water}</h1>
-              <img src={plant.image} alt={plant.plantName} /> */}
             </>
           );
         })
