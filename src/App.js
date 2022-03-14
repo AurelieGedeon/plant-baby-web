@@ -8,6 +8,7 @@ import Signup from "./scenes/Signup";
 import Dashboard from "./scenes/Dashboard";
 import { useEffect, useState } from "react";
 import React from "react";
+import Footer from "./components/Footer";
 
 function App() {
   const [user, setUser] = useState();
@@ -34,6 +35,7 @@ function App() {
         <Route path="/plants" element={<PlantList />} />
         <Route path="/plants/:plantId" element={<PlantPage />} />
       </Routes>
+      <Footer />
     </>
   );
 }

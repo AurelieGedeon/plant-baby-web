@@ -29,9 +29,12 @@
 
 .plant-page {
   display: flex;
-  margin-top: 50px;
 }
 
+.plant-list {
+  display: flex;
+  flex-wrap: wrap;
+}
 .plant-page-img-column {
   display: flex;
   flex-direction: column;
@@ -67,5 +70,5 @@ header {
 }
 
 .logo-button {
-  background-image: url("./assets/PlantBabyLogo.png");
+  background-image: url("./assets/PlantBabyLogoW.png");
 }

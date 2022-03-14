@@ -2,8 +2,8 @@
   background-image: url("../assets/PlantBabyHeroImage.png");
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
+  background-size: cover;
+  margin-top: 10%;
 }
 
 @media screen and (max-width: 1000px) {
@@ -14,6 +14,7 @@
   .hero-button {
     top: 50%;
     left: 50%;
+    font-weight: 500;
   }
 }
 
@@ -24,11 +25,16 @@
   align-items: center;
   height: 815px;
   position: relative;
-  /* z-index: 2; */
 }
 
 .hero-button {
   position: relative;
   top: 75%;
-  left: 50%;
+  left: 45%;
+}
+
+.hero-info {
+  display: flex;
+  flex-direction: row;
+  margin: 6%;
 }

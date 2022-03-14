@@ -10,27 +10,29 @@ export default function PlantList() {
       .catch(alert);
   }, []);
   return (
-    <>
+    <div style={{ marginTop: "8%" }}>
       <h1>Plant List</h1>
-      {!plantList ? (
-        <h2>Loading...</h2>
-      ) : (
-        plantList.map((plant) => {
-          console.log(plant);
-          return (
-            <>
-              <PlantCard
-                name={plant.plantName}
-                image={plant.image}
-                id={plant.id}
-                water={plant.water}
-                humidity={plant.humidity}
-                temperature
-              />
-            </>
-          );
-        })
-      )}
-    </>
+      <div className="plant-list">
+        {!plantList ? (
+          <h2>Loading...</h2>
+        ) : (
+          plantList.map((plant) => {
+            console.log(plant);
+            return (
+              <div style={{ maxWidth: "260px", margin: "2%" }}>
+                <PlantCard
+                  name={plant.plantName}
+                  image={plant.image}
+                  id={plant.id}
+                  water={plant.water}
+                  humidity={plant.humidity}
+                  temperature
+                />
+              </div>
+            );
+          })
+        )}
+      </div>
+    </div>
   );
 }

@@ -5,10 +5,11 @@ import {
   CardContent,
   CardMedia,
   Typography,
-  Button,
   CardActionArea,
   CardActions,
+  IconButton,
 } from "@mui/material";
+import AddIcon from "@mui/icons-material/Add";
 
 export default function PlantCard({ name, image, id }) {
   let navigate = useNavigate();
@@ -18,7 +19,7 @@ export default function PlantCard({ name, image, id }) {
   return (
     <Card sx={{ maxWidth: 345 }} onClick={handlePlantInfo}>
       <CardActionArea>
-        <CardMedia component="img" height="350" image={image} alt={name} />
+        <CardMedia component="img" height="300" image={image} alt={name} />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {name}
@@ -26,9 +27,9 @@ export default function PlantCard({ name, image, id }) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
+        <IconButton size="small" color="success" aria-label="add">
+          <AddIcon />
+        </IconButton>
       </CardActions>
     </Card>
   );

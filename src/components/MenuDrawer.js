@@ -20,7 +20,7 @@ export default function MenuDrawer() {
   const navigate = useNavigate();
 
   const tabs = [
-    { label: "Dasboard", to: "/dashboard" },
+    { label: "Dashboard", to: "/dashboard" },
     { label: "Plants", to: "/plants" },
     { label: "Plant Doctor", to: "/plantdoctor" },
   ];

@@ -1,8 +1,8 @@
 import { AppBar, Box, Toolbar, Button } from "@mui/material";
 import MenuDrawer from "./MenuDrawer";
 import "../App.css";
-import { useNavigate, Link } from "react-router-dom";
-import Logo from "../assets/PlantBabyLogoS.png";
+import { useNavigate } from "react-router-dom";
+import Logo from "../assets/PlantBabyLogoW.png";
 
 export default function Header() {
   const navigate = useNavigate();
