@@ -10,18 +10,28 @@ export default function Hero() {
     <>
       <div class="container">
         <div class="hero-image">
-          {/* <div class="hero-button"> */}
-          <Fab className="hero-button" variant="extended">
+          <Fab
+            href="#AboutUs"
+            className="hero-button"
+            variant="extended"
+            style={{
+              fontWeight: "700",
+              backgroundColor: "#c9df98",
+              scrollBehavior: "smooth",
+            }}
+          >
             Get Started
           </Fab>
         </div>
       </div>
-      <div style={{ marginTop: "7%" }}>
-        <h1>Welcome to Plant Baby!</h1>
+      <div class="hero-text" style={{ marginTop: "10%" }}>
+        <h1 style={{ paddingLeft: "3%" }}>Welcome to Plant Baby!</h1>
         <div className="hero-info">
-          <div>
-            <h2>About Us</h2>
-            <p>
+          <div style={{ paddingLeft: "5%" }}>
+            <h2 id="AboutUs" style={{}}>
+              About Us
+            </h2>
+            <p style={{ maxWidth: "60%" }}>
               Buying, growing, and collecting plants has become a more popular
               trend in the recent years. Some people even consider themselves
               plant parents, which is where we come in! We decided on this
@@ -39,21 +49,21 @@ export default function Hero() {
           <img
             src={Man}
             alt="short-haired man watering a plant"
-            style={{ maxWidth: "35%" }}
+            style={{ maxWidth: "35%", paddingRight: "17%" }}
           />
-          <div>
+          <div style={{ paddingLeft: "5%" }}>
             <h2>Learn what works best for your plant!</h2>
-            <p>
+            <p style={{ maxWidth: "70%" }}>
               We have researched the necessary requirements needed to help your
-              plant happy including conditions such as: watering, lighting, and
-              humidity requirements.
+              plant stay happy including conditions like watering, lighting,
+              humidity, and many more!
             </p>
           </div>
         </div>
         <div className="hero-info">
-          <div>
+          <div style={{ paddingLeft: "5%" }}>
             <h2>Create your plant family!</h2>
-            <p>
+            <p style={{ maxWidth: "60%" }}>
               Plant Baby Members can go through our extensive roster of plants
               and pick the plants they currently have in their homes! Their
               plants will be displayed on their dashboard along with some other

@@ -17,7 +17,7 @@ export default function PlantCard({ name, image, id }) {
     navigate(`/plants/${id}`);
   };
   return (
-    <Card sx={{ maxWidth: 345 }} onClick={handlePlantInfo}>
+    <Card sx={{ width: 290 }} onClick={handlePlantInfo}>
       <CardActionArea>
         <CardMedia component="img" height="300" image={image} alt={name} />
         <CardContent>
