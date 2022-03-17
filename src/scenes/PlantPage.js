@@ -15,7 +15,7 @@ export default function PlantPage() {
       .catch(alert);
   }, []);
   return (
-    <div className="plant-page" style={{ marginTop: "50px" }}>
+    <div className="plant-page">
       <div className="plant-page-img-column">
         <img
           src={plantInfo.image}

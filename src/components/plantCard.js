@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   Card,
@@ -10,15 +10,22 @@ import {
   IconButton,
 } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
+import Favorites from "./Favorites";
 
-export default function PlantCard({ name, image, id }) {
+export default function PlantCard({
+  name,
+  image,
+  id,
+  isFavorite,
+  setPlantList,
+}) {
   let navigate = useNavigate();
   const handlePlantInfo = () => {
     navigate(`/plants/${id}`);
   };
   return (
-    <Card sx={{ width: 290 }} onClick={handlePlantInfo}>
-      <CardActionArea>
+    <Card sx={{ width: 290 }}>
+      <CardActionArea onClick={handlePlantInfo}>
         <CardMedia component="img" height="300" image={image} alt={name} />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -27,9 +34,11 @@ export default function PlantCard({ name, image, id }) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <IconButton size="small" color="success" aria-label="add">
-          <AddIcon />
-        </IconButton>
+        <Favorites
+          isFavorite={isFavorite}
+          id={id}
+          setPlantList={setPlantList}
+        />
       </CardActions>
     </Card>
   );

@@ -3,10 +3,13 @@ import PlantCard from "../components/PlantCard";
 
 export default function PlantList() {
   const [plantList, setPlantList] = useState();
+
   useEffect(() => {
     fetch("http://localhost:3000/plants")
       .then((res) => res.json())
-      .then((data) => setPlantList(data))
+      .then((data) => {
+        setPlantList(data);
+      })
       .catch(alert);
   }, []);
   return (
@@ -21,12 +24,14 @@ export default function PlantList() {
             return (
               <div style={{ maxWidth: "260px", margin: "2%" }}>
                 <PlantCard
+                  setPlantList={setPlantList}
+                  isFavorite={plant.isFavorite}
                   name={plant.plantName}
                   image={plant.image}
                   id={plant.id}
                   water={plant.water}
                   humidity={plant.humidity}
-                  temperature
+                  // temperature
                 />
               </div>
             );
