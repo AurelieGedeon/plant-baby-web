@@ -37,7 +37,10 @@ function App() {
             }
           />
           <Route path="/plants" element={<PlantList />} />
-          <Route path="/plants/:plantId" element={<PlantPage />} />
+          <Route
+            path="/plants/:plantId"
+            element={<PlantPage style={{ minHeight: "100vh" }} />}
+          />
         </Routes>
         <Footer />
       </PlantContext.Provider>

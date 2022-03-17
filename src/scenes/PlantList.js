@@ -14,7 +14,7 @@ export default function PlantList() {
   }, []);
   return (
     <div style={{ marginTop: "8%" }}>
-      <h1>Plant List</h1>
+      <h1 style={{ paddingLeft: "2%" }}>Plant List</h1>
       <div className="plant-list">
         {!plantList ? (
           <h2>Loading...</h2>

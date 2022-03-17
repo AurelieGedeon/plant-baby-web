@@ -29,6 +29,7 @@
 
 .plant-page {
   display: flex;
+  margin-top: 5%;
 }
 
 .plant-list {
@@ -75,4 +76,7 @@ header {
 
 html {
   scroll-behavior: smooth;
+}
+
+.footer {
 }

@@ -8,20 +8,46 @@ import {
   signInWithPopup,
 } from "firebase/auth";
 import { app } from "../ConnectAuth";
+import { BoyRounded } from "@mui/icons-material";
 
-export default function Signup({ setUser }) {
+export default function Signup({ user, setUser }) {
   const [email, setEmail] = useState("");
   const [password, setPasword] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  const [favorites, setFavorites] = useState("");
   const navigate = useNavigate();
   const provider = new GoogleAuthProvider();
   const auth = getAuth(app);
+
+  function createUser(uid) {
+    const user = {
+      email: email.toLowerCase(),
+      firstName,
+      lastName,
+      uid,
+      favorites,
+    };
+    fetch("http://localhost:3000/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
+    })
+      .then((res) => res.json)
+      .then(() => {
+        setUser(user);
+      })
+      .catch(alert);
+  }
+
   const handleFormSubmit = (event) => {
     event.preventDefault();
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
         setUser(result.user);
+        createUser(result.user.uid);
         console.log(result.user);
         navigate("/dashboard");
       })
@@ -31,8 +57,9 @@ export default function Signup({ setUser }) {
     signInWithPopup(auth, provider)
       .then((result) => {
         setUser(result.user);
+        createUser(result.user.uid);
         console.log(result.user);
-        navigate("/");
+        navigate("/dashboard");
       })
       .catch(alert);
   };

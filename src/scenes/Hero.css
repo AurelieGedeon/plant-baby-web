@@ -8,12 +8,13 @@
 
 @media screen and (max-width: 1000px) {
   .hero-image {
-    background-size: 100vw;
+    background-image: url("../assets/PlantBabyHeroImg.png");
+    background-position: center;
     background-repeat: no-repeat;
   }
   .hero-button {
     top: 50%;
-    left: 50%;
+    left: 35%;
     font-weight: 700;
     background-color: #c9df98;
   }
