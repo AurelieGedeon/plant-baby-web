@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import PlantCard from "../components/PlantCard";
 
-export default function PlantList() {
+export default function PlantList({ user }) {
   const [plantList, setPlantList] = useState();
 
   useEffect(() => {
@@ -22,7 +22,9 @@ export default function PlantList() {
           plantList.map((plant) => {
             console.log(plant);
             return (
-              <div style={{ maxWidth: "260px", margin: "2%" }}>
+              <div
+                style={{ maxWidth: "260px", margin: "2%", paddingLeft: "4%" }}
+              >
                 <PlantCard
                   setPlantList={setPlantList}
                   isFavorite={plant.isFavorite}
@@ -31,7 +33,7 @@ export default function PlantList() {
                   id={plant.id}
                   water={plant.water}
                   humidity={plant.humidity}
-                  // temperature
+                  user={user}
                 />
               </div>
             );

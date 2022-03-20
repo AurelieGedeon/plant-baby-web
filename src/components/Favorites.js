@@ -2,20 +2,20 @@ import { useState } from "react";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
-export default function Favorites({ isFavorite, id, setPlantList }) {
+export default function Favorites({ isFavorite, id, setPlantList, user }) {
   const [toggleFavorite, setToggleFavorite] = useState(true);
 
   const handleToggleFavorites = () => {
     setToggleFavorite(!toggleFavorite);
-    fetch(`http://localhost:3000/plants/${id}`, {
+    fetch(`http://localhost:3000/users/${user.uid}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ isFavorite: toggleFavorite }),
+      body: JSON.stringify({ isFavorite: toggleFavorite, plantId: id }),
     })
       .then(() => {
-        fetch("http://localhost:3000/plants")
+        fetch(`http://localhost:3000/users/${user.uid}/plants`)
           .then((res) => res.json())
           .then((data) => {
             setPlantList(data);

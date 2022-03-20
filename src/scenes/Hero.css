@@ -11,6 +11,7 @@
     background-image: url("../assets/PlantBabyHeroImg.png");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
   }
   .hero-button {
     top: 50%;
@@ -50,4 +51,11 @@
   .hero-info {
     flex-direction: column;
   }
+}
+
+.bottom-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 8%;
 }

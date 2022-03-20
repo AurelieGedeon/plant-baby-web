@@ -1,11 +1,20 @@
-import { Fab } from "@mui/material";
+import { Fab, Button, Link } from "@mui/material";
 import "../scenes/Hero.css";
 import React from "react";
 import Afro from "../assets/afro-watering-plants.jpeg";
 import Ponytail from "../assets/low-ponytail-watering-plants.jpeg";
 import Man from "../assets/man-watering-plants.jpeg";
+import { useNavigate } from "react-router-dom";
 
 export default function Hero() {
+  const navigate = useNavigate();
+  const navigatePlantList = () => {
+    navigate("/plants");
+  };
+  const navigateSignup = () => {
+    navigate("/signup");
+  };
+
   return (
     <>
       <div class="container">
@@ -75,6 +84,34 @@ export default function Hero() {
             alt="man with an afro watering plants"
             style={{ maxWidth: "35%" }}
           />
+        </div>
+        <div className="bottom-buttons">
+          <Button
+            onClick={navigateSignup}
+            variant="extended"
+            size="large"
+            style={{
+              fontWeight: "700",
+              backgroundColor: "#c9df98",
+              borderRadius: "30px",
+              marginRight: "10%",
+            }}
+          >
+            Create an Account!
+          </Button>
+          <Button
+            className="bottom-buttons"
+            onClick={navigatePlantList}
+            size="large"
+            variant="extended"
+            style={{
+              fontWeight: "700",
+              backgroundColor: "#c9df98",
+              borderRadius: "30px",
+            }}
+          >
+            Check out our plants!
+          </Button>
         </div>
       </div>
     </>

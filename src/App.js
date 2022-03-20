@@ -22,7 +22,7 @@ function App() {
   return (
     <>
       <PlantContext.Provider value={(plant, setPlant)}>
-        <Header />
+        <Header user={user} />
         <Routes>
           <Route path="/" element={<Hero />} />
           <Route
@@ -36,11 +36,8 @@ function App() {
               user ? <Dashboard user={user} /> : <Login setUser={setUser} />
             }
           />
-          <Route path="/plants" element={<PlantList />} />
-          <Route
-            path="/plants/:plantId"
-            element={<PlantPage style={{ minHeight: "100vh" }} />}
-          />
+          <Route path="/plants" element={<PlantList user={user} />} />
+          <Route path="/plants/:plantId" element={<PlantPage user={user} />} />
         </Routes>
         <Footer />
       </PlantContext.Provider>

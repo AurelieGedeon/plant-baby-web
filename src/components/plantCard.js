@@ -1,4 +1,3 @@
-import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   Card,
@@ -7,9 +6,8 @@ import {
   Typography,
   CardActionArea,
   CardActions,
-  IconButton,
 } from "@mui/material";
-import AddIcon from "@mui/icons-material/Add";
+
 import Favorites from "./Favorites";
 
 export default function PlantCard({
@@ -18,6 +16,7 @@ export default function PlantCard({
   id,
   isFavorite,
   setPlantList,
+  user,
 }) {
   let navigate = useNavigate();
   const handlePlantInfo = () => {
@@ -38,6 +37,7 @@ export default function PlantCard({
           isFavorite={isFavorite}
           id={id}
           setPlantList={setPlantList}
+          user={user}
         />
       </CardActions>
     </Card>

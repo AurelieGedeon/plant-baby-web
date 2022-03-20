@@ -20,9 +20,8 @@ export default function Login({ user, setUser }) {
   useEffect(() => {
     const localUser = localStorage.getItem("displayName");
     const avatar = localStorage.getItem("avatar");
-    console.log("locaUser from LS", localUser);
+    console.log("localUser from LS", localUser);
 
-    //navigate("/");
     if (localUser) setUser({ ...user, displayName: localUser, photo: avatar });
   }, []);
 
@@ -46,7 +45,7 @@ export default function Login({ user, setUser }) {
         localStorage.setItem("uid", result.user.uid);
 
         console.log(result.user.displayName);
-        navigate("/");
+        navigate("/dashboard");
       })
       .catch(alert);
     console.log("Here is my user from my parent App component", user);
