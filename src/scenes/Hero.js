@@ -95,6 +95,7 @@ export default function Hero() {
               backgroundColor: "#c9df98",
               borderRadius: "30px",
               marginRight: "10%",
+              padding: "15px",
             }}
           >
             Create an Account!
@@ -108,6 +109,7 @@ export default function Hero() {
               fontWeight: "700",
               backgroundColor: "#c9df98",
               borderRadius: "30px",
+              padding: "15px",
             }}
           >
             Check out our plants!
