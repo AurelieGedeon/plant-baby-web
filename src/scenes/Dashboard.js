@@ -8,7 +8,7 @@ export default function Dashboard({ user }) {
   return (
     <>
       <h1>Welcome</h1>
-      <h2>Welcome, {user.firstName || user.email || user.displayName}!</h2>
+      <h2>Welcome, {user.firstName || user.displayName}!</h2>
     </>
   );
 }

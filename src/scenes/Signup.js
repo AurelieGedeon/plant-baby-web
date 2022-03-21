@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Button } from "@mui/material";
+import { Button, Box, TextField } from "@mui/material";
 import {
   getAuth,
   createUserWithEmailAndPassword,
@@ -67,42 +67,50 @@ export default function Signup({ user, setUser }) {
       <div class="login">
         <h1>Signup</h1>
         <hr />
-        <form onSubmit={handleFormSubmit}>
-          <label>
-            First Name:
-            <input
-              type="text"
-              value={firstName}
-              onChange={(event) => setFirstName(event.target.value)}
-            />
-          </label>
-          <label>
-            Last Name:
-            <input
-              type="text"
-              value={lastName}
-              onChange={(event) => setLastName(event.target.value)}
-            />
-          </label>
-          <label>
-            Email:{" "}
-            <input
-              type="email"
-              value={email}
-              onChange={(event) => setEmail(event.target.value)}
-            />
-          </label>
-          <br />
-          <label>
-            Password:{" "}
-            <input
-              type="password"
-              value={password}
-              onChange={(event) => setPasword(event.target.value)}
-            />
-          </label>
-          <input type="submit" value="Sign up" />
-        </form>
+        <Box
+          component="form"
+          sx={{
+            "& .MuiTextField-root": { m: 1, width: "25ch" },
+          }}
+          noValidate
+          autoComplete="off"
+          onSubmit={handleFormSubmit}
+        >
+          <TextField
+            id="outlined-basic"
+            label="First Name"
+            type="text"
+            autoComplete="off"
+            value={firstName}
+            onChange={(event) => setFirstName(event.target.value)}
+          />
+          <TextField
+            id="outlined-basic"
+            label="Last Name"
+            type="text"
+            autoComplete="off"
+            value={lastName}
+            onChange={(event) => setLastName(event.target.value)}
+          />
+          <TextField
+            id="outlined-basic"
+            label="Email"
+            type="text"
+            autoComplete="off"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+          />
+          <TextField
+            id="outlined-password-input"
+            label="Password"
+            type="password"
+            autoComplete="off"
+            value={password}
+            onChange={(event) => setPasword(event.target.value)}
+          />
+          <Button type="submit">Sign Up</Button>
+        </Box>
+
         <Button onClick={handleGoogleLogin}>Sign in with Google</Button>
         <p>
           Already a user? <Link to="/login">Login</Link>

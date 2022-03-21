@@ -56,49 +56,33 @@ export default function Login({ user, setUser }) {
       <div className="login">
         <h1>Login</h1>
         <hr />
-        {/* <Box
-        component="form"
-        sx={{
-          "& .MuiTextField-root": { m: 1, width: "25ch" },
-        }}
-        noValidate
-        autoComplete="off"
-        onSubmit={handleFormSubmit}
-      >
-        <TextField
-          id="outlined-basic"
-          label="Email"
-          type="text"
-          autoComplete="current-password"
-        />
-        <TextField
-          id="outlined-password-input"
-          label="Password"
-          type="password"
+        <Box
+          component="form"
+          sx={{
+            "& .MuiTextField-root": { m: 1, width: "25ch" },
+          }}
+          noValidate
           autoComplete="off"
-        />
-      </Box> */}
-
-        <form onSubmit={handleFormSubmit}>
-          <label>
-            Email:{" "}
-            <input
-              type="email"
-              value={email}
-              onChange={(event) => setEmail(event.target.value)}
-            />
-          </label>
-          <br />
-          <label>
-            Password:{" "}
-            <input
-              type="password"
-              value={password}
-              onChange={(event) => setPasword(event.target.value)}
-            />
-          </label>
-          <input type="submit" value="Login" />
-        </form>
+          onSubmit={handleFormSubmit}
+        >
+          <TextField
+            id="outlined-basic"
+            label="Email"
+            type="text"
+            autoComplete="current-password"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+          />
+          <TextField
+            id="outlined-password-input"
+            label="Password"
+            type="password"
+            autoComplete="off"
+            value={password}
+            onChange={(event) => setPasword(event.target.value)}
+          />
+          <Button type="submit">Login</Button>
+        </Box>
         <Button onClick={handleGoogleLogin}>Sign in with Google</Button>
         <p>
           Not a user? <Link to="/signup">Sign Up</Link>
