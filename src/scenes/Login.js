@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Button } from "@mui/material";
+import { Button, Box, TextField } from "@mui/material";
 
 import {
   getAuth,
@@ -52,8 +52,30 @@ export default function Login({ user, setUser }) {
   };
   return (
     <>
-      <h1>Login</h1>
+      <h1 style={{ marginTop: "7%" }}>Login</h1>
       <hr />
+      {/* <Box
+        component="form"
+        sx={{
+          "& .MuiTextField-root": { m: 1, width: "25ch" },
+        }}
+        noValidate
+        autoComplete="off"
+        onSubmit={handleFormSubmit}
+      >
+        <TextField
+          id="outlined-basic"
+          label="Email"
+          type="text"
+          autoComplete="current-password"
+        />
+        <TextField
+          id="outlined-password-input"
+          label="Password"
+          type="password"
+          autoComplete="off"
+        />
+      </Box> */}
       <form onSubmit={handleFormSubmit}>
         <label>
           Email:{" "}
