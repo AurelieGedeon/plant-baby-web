@@ -9,6 +9,7 @@ import {
   signInWithPopup,
 } from "firebase/auth";
 import { app } from "../ConnectAuth";
+import { margin } from "@mui/system";
 
 export default function Login({ user, setUser }) {
   const [email, setEmail] = useState("");
@@ -51,10 +52,11 @@ export default function Login({ user, setUser }) {
     console.log("Here is my user from my parent App component", user);
   };
   return (
-    <>
-      <h1 style={{ marginTop: "7%" }}>Login</h1>
-      <hr />
-      {/* <Box
+    <div class="login-signup">
+      <div className="login">
+        <h1>Login</h1>
+        <hr />
+        {/* <Box
         component="form"
         sx={{
           "& .MuiTextField-root": { m: 1, width: "25ch" },
@@ -76,30 +78,32 @@ export default function Login({ user, setUser }) {
           autoComplete="off"
         />
       </Box> */}
-      <form onSubmit={handleFormSubmit}>
-        <label>
-          Email:{" "}
-          <input
-            type="email"
-            value={email}
-            onChange={(event) => setEmail(event.target.value)}
-          />
-        </label>
-        <br />
-        <label>
-          Password:{" "}
-          <input
-            type="password"
-            value={password}
-            onChange={(event) => setPasword(event.target.value)}
-          />
-        </label>
-        <input type="submit" value="Login" />
-      </form>
-      <Button onClick={handleGoogleLogin}>Sign in with Google</Button>
-      <p>
-        Not a user? <Link to="/signup">Sign Up</Link>
-      </p>
-    </>
+
+        <form onSubmit={handleFormSubmit}>
+          <label>
+            Email:{" "}
+            <input
+              type="email"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
+            />
+          </label>
+          <br />
+          <label>
+            Password:{" "}
+            <input
+              type="password"
+              value={password}
+              onChange={(event) => setPasword(event.target.value)}
+            />
+          </label>
+          <input type="submit" value="Login" />
+        </form>
+        <Button onClick={handleGoogleLogin}>Sign in with Google</Button>
+        <p>
+          Not a user? <Link to="/signup">Sign Up</Link>
+        </p>
+      </div>
+    </div>
   );
 }

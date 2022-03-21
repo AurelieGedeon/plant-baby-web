@@ -6,10 +6,7 @@ import Typography from "@mui/material/Typography";
 export default function Footer() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar
-        position="static"
-        sx={{ top: "auto", position: "absolute", width: "100%", bottom: 0 }}
-      >
+      <AppBar position="static" sx={{ top: "auto", bottom: 0 }}>
         <Toolbar
           style={{ backgroundColor: "#224907", justifyContent: "center" }}
         >

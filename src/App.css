@@ -77,3 +77,31 @@ header {
 html {
   scroll-behavior: smooth;
 }
+
+body {
+  min-height: 100%;
+}
+
+.login-signup {
+  background-image: url("./assets/LoginSignupPage.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  min-height: 1080px;
+  margin-top: 7%;
+}
+
+* {
+  box-sizing: border-box;
+}
+.login {
+  background-color: white;
+  width: 32%;
+  margin-top: 7%;
+  padding: 5%;
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  box-shadow: 5px 10px 20px 0px;
+}
