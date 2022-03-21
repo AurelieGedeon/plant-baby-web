@@ -85,7 +85,7 @@ export default function Hero() {
             style={{ maxWidth: "35%" }}
           />
         </div>
-        <div className="bottom-buttons">
+        <div className="bottom-buttons" style={{ paddingBottom: "8%" }}>
           <Button
             onClick={navigateSignup}
             variant="extended"
