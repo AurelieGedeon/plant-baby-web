@@ -9,6 +9,7 @@ import Dashboard from "./scenes/Dashboard";
 import { useEffect, useState, createContext } from "react";
 import React from "react";
 import Footer from "./components/Footer";
+import PlantDoctor from "./scenes/PlantDoctor";
 
 export const PlantContext = createContext();
 
@@ -37,6 +38,7 @@ function App() {
             }
           />
           <Route path="/plants" element={<PlantList user={user} />} />
+          <Route path="/plantdoctor" element={<PlantDoctor />} />
           <Route path="/plants/:plantId" element={<PlantPage user={user} />} />
         </Routes>
         <Footer />

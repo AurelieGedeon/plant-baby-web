@@ -17,7 +17,6 @@ export default function Header({ user }) {
   const auth = getAuth();
 
   const handleLogOut = (e) => {
-    e.preventDefault();
     signOut(auth)
       .then(() => {
         localStorage.clear();

@@ -8,7 +8,6 @@ import {
   signInWithPopup,
 } from "firebase/auth";
 import { app } from "../ConnectAuth";
-import { BoyRounded } from "@mui/icons-material";
 
 export default function Signup({ user, setUser }) {
   const [email, setEmail] = useState("");
@@ -28,7 +27,7 @@ export default function Signup({ user, setUser }) {
       uid,
       favorites,
     };
-    fetch("http://localhost:3000/users", {
+    fetch("https://plant-baby-ag.uc.r.appspot.com/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

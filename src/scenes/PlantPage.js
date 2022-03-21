@@ -9,7 +9,7 @@ export default function PlantPage() {
   const [plantInfo, setPlantInfo] = useState([]);
   console.log(plantInfo);
   useEffect(() => {
-    fetch(`http://localhost:3000/plants/${params.plantId}`)
+    fetch(`https://plant-baby-ag.uc.r.appspot.com/plants/${params.plantId}`)
       .then((res) => res.json())
       .then((data) => setPlantInfo(data))
       .catch(alert);

@@ -5,7 +5,7 @@ export default function PlantList({ user }) {
   const [plantList, setPlantList] = useState();
 
   useEffect(() => {
-    fetch("http://localhost:3000/plants")
+    fetch("https://plant-baby-ag.uc.r.appspot.com/plants")
       .then((res) => res.json())
       .then((data) => {
         setPlantList(data);
