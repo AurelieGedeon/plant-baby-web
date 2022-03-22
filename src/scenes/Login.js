@@ -9,7 +9,6 @@ import {
   signInWithPopup,
 } from "firebase/auth";
 import { app } from "../ConnectAuth";
-import { margin } from "@mui/system";
 
 export default function Login({ user, setUser }) {
   const [email, setEmail] = useState("");
@@ -21,7 +20,7 @@ export default function Login({ user, setUser }) {
   useEffect(() => {
     const localUser = localStorage.getItem("displayName");
     const avatar = localStorage.getItem("avatar");
-    console.log("localUser from LS", localUser);
+    // console.log("localUser from LS", localUser);
 
     if (localUser) setUser({ ...user, displayName: localUser, photo: avatar });
   }, []);
@@ -31,7 +30,7 @@ export default function Login({ user, setUser }) {
     signInWithEmailAndPassword(auth, email, password)
       .then((result) => {
         setUser(result.user);
-        console.log(result.user);
+        // console.log(result.user);
         navigate("/dashboard");
       })
       .catch(alert);
@@ -45,14 +44,14 @@ export default function Login({ user, setUser }) {
         localStorage.setItem("avatar", result.user.photoURL);
         localStorage.setItem("uid", result.user.uid);
 
-        console.log(result.user.displayName);
+        // console.log(result.user.displayName);
         navigate("/dashboard");
       })
       .catch(alert);
-    console.log("Here is my user from my parent App component", user);
+    // console.log("Here is my user from my parent App component", user);
   };
   return (
-    <div class="login-signup">
+    <div className="login-signup">
       <div className="login">
         <h1>Login</h1>
         <hr />

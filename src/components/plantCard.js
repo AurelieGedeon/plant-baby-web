@@ -33,12 +33,7 @@ export default function PlantCard({
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Favorites
-          isFavorite={isFavorite}
-          id={id}
-          setPlantList={setPlantList}
-          user={user}
-        />
+        <Favorites isFavorite={isFavorite} id={id} user={user} />
       </CardActions>
     </Card>
   );

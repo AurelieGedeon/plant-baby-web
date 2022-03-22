@@ -5,7 +5,7 @@ import "../App.css";
 
 export default function PlantPage() {
   const params = useParams();
-  console.log(params);
+  // console.log(params);
   const [plantInfo, setPlantInfo] = useState([]);
   console.log(plantInfo);
   useEffect(() => {

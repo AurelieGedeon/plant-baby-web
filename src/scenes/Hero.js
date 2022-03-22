@@ -58,9 +58,9 @@ export default function Hero() {
           <img
             src={Man}
             alt="short-haired man watering a plant"
-            style={{ maxWidth: "35%", paddingRight: "17%" }}
+            style={{ maxWidth: "55%", paddingRight: "17%" }}
           />
-          <div style={{ paddingLeft: "5%" }}>
+          <div style={{ paddingLeft: "5%", paddingTop: "8%" }}>
             <h2>Learn what works best for your plant!</h2>
             <p style={{ maxWidth: "70%" }}>
               We have researched the necessary requirements needed to help your

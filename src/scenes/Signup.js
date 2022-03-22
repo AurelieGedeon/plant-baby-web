@@ -47,7 +47,7 @@ export default function Signup({ user, setUser }) {
       .then((result) => {
         setUser(result.user);
         createUser(result.user.uid);
-        console.log(result.user);
+        // console.log(result.user);
         navigate("/dashboard");
       })
       .catch(alert);
@@ -57,7 +57,7 @@ export default function Signup({ user, setUser }) {
       .then((result) => {
         setUser(result.user);
         createUser(result.user.uid);
-        console.log(result.user);
+        // console.log(result.user);
         navigate("/dashboard");
       })
       .catch(alert);

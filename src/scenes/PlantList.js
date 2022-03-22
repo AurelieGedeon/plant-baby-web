@@ -1,8 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import PlantCard from "../components/PlantCard";
+import { FavoriteContext } from "../App";
 
 export default function PlantList({ user }) {
-  const [plantList, setPlantList] = useState();
+  const { plantList, setPlantList } = useContext(FavoriteContext);
+  // const [plantList, setPlantList] = useState();
 
   useEffect(() => {
     fetch("https://plant-baby-ag.uc.r.appspot.com/plants")
@@ -13,14 +15,13 @@ export default function PlantList({ user }) {
       .catch(alert);
   }, []);
   return (
-    <div style={{ marginTop: "8%" }}>
+    <div>
       <h1 style={{ paddingLeft: "2%" }}>Plant List</h1>
       <div className="plant-list">
         {!plantList ? (
           <h2>Loading...</h2>
         ) : (
           plantList.map((plant) => {
-            console.log(plant);
             return (
               <div
                 style={{ maxWidth: "260px", margin: "2%", paddingLeft: "4%" }}
