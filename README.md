@@ -33,4 +33,10 @@ You have the option to create an account or login to an existing account. You al
 
 ## Checking out the Plant List
 You can check out the plant list without creating an account, but you won't be able to favorite any plants without an account.
+<img src="2022-03-28 15.15.21.gif" width="100%">
+
+## Adding a Plant to the Dashboard
+Once you have an account, you will be able to add a plant to your Dashboard. 
+<img src="" width="100%">
+
 
