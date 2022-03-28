@@ -27,3 +27,5 @@ You are immediately taken to the homepage where it gives a brief description on 
 
 ## Logging in/Creating an Account
 You have the option to create an account or login to an existing account. You also have the option to login using Google. This app is secured using Firebase Authentication
+
+<img src="Screen Shot 2022-03-28 at 3.53.40 PM.png" width="100%">
