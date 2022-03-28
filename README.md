@@ -23,3 +23,7 @@ In order to create this web app, a couple packages needed to be installed before
  ## Exploring the App
 You are immediately taken to the homepage where it gives a brief description on what the app is about and what you can do on it. Once you scroll to the bottom you can immediately go to the plant list or you can create an account
  
+<img src="https://github.com/AurelieGedeon/plant-baby-web/blob/main/2022-03-28%2015.10.03.gif?raw=true" width="100%">
+
+## Logging in/Creating an Account
+You have the option to create an account or login to an existing account. You also have the option to login using Google. This app is secured using Firebase Authentication
