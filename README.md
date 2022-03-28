@@ -37,6 +37,6 @@ You can check out the plant list without creating an account, but you won't be a
 
 ## Adding a Plant to the Dashboard
 Once you have an account, you will be able to add a plant to your Dashboard. 
-<img src="" width="100%">
+<img src="2022-03-28 15.16.59.gif" width="100%">
 
 
