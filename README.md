@@ -5,7 +5,7 @@
 Plant Baby was my final project as a student at Boca Code. The goal was to give users information about specific plants to give them suffiecient care to survive.
 
 ## Getting Started
-In order to create this web app, a couple packages needed to be installed before continuing:
+In order to create this web app, a couple packages are needed to be installed before continuing:
 
 ### React
 
@@ -22,7 +22,7 @@ In order to create this web app, a couple packages needed to be installed before
 - @mui/icons-material
 <img width="292" alt="Screen Shot 2022-03-28 at 2 55 17 PM" src="https://user-images.githubusercontent.com/90660833/160467300-89ae0a1e-a3bd-4a81-a0eb-84cd08a78004.png">
 
-### Here is a list of all the dependencies included in this project:
+### Here is a complete list of all the dependencies included in this project:
 <img width="415" alt="Screen Shot 2022-05-04 at 4 13 31 PM" src="https://user-images.githubusercontent.com/90660833/166818226-6d8b65e6-2d14-4da2-a9f3-3221d502ac06.png">
 
  ## Exploring the App
